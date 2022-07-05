@@ -1,8 +1,9 @@
 class Item
+    attr_reader :published_date
+
     def initialize()
         
     end
-    attr_reader: published_date
     def can_be_archived?()
         @published_date
     end

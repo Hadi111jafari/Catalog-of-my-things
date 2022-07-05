@@ -1,7 +1,7 @@
-require_relative './../item'
-classs Author
+require_relative './item'
 
-def add_item(item)
+class Author
+    def add_item(item)
 
-end    
+    end    
 end

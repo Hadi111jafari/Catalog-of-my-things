@@ -1,4 +1,4 @@
-require_relative './../music_album'
+require_relative './../classes/music_album'
 
 describe 'music_album TDD' do
   context 'can be archived' do

@@ -1,7 +1,5 @@
-require_relative './../item'
-classs Genre
-
-def add_item(item)
-
-end    
+require_relative './item'
+class Genre
+    def add_item(item)
+    end    
 end

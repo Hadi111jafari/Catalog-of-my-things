@@ -1,5 +1,5 @@
-require_relative './../genre'
-require_relative './../item'
+require_relative './../classes/genre'
+require_relative './../classes/item'
 describe 'Genre TDD' do
   context 'Add Item' do
     it 'item created' do
@@ -7,4 +7,5 @@ describe 'Genre TDD' do
       item=Item.new
       expect(genre.add_item(item)).to eq(true)
     end
+  end
 end
