@@ -22,7 +22,7 @@ def main # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
     when 9 then app.add_music_album
     when 10 then app.add_game
     else
-    #   write_file.close_file
+      #   write_file.close_file
       break
     end
     break unless input.positive? && input < 12
@@ -30,7 +30,6 @@ def main # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
 end
 
 def menu
-
   puts "\nPlease choose an option by entering a number:\n\n"
   puts '1. List all books.'
   puts '2. List all music albums.'

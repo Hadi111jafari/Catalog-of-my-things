@@ -3,8 +3,8 @@ require_relative './../classes/item'
 describe 'author TDD' do
   context 'Add Item' do
     it 'item created' do
-      author=Author.new
-      item=Item.new
+      author = Author.new
+      item = Item.new
       expect(author.add_item(item)).to eq(true)
     end
   end
