@@ -5,9 +5,11 @@ class Item
     # @published_date
     false
   end
+
   def archived
     false
   end
+
   def move_to_archive
     false
   end

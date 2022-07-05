@@ -12,6 +12,6 @@ class Label
 
   def add_item(item)
     @item = item
-    @items << self
+    # @items << self
   end
 end
