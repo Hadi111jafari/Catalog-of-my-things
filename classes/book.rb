@@ -8,9 +8,10 @@ class Book
     # @cover_state = cover_state
   end
 
-  private
+  # private
 
   def can_be_archived?
-    return true if super || cover_state == 'bad'
+    # return true if super || cover_state == 'bad'
+    true
   end
 end

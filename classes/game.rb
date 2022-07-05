@@ -4,6 +4,6 @@ class Game
   end
 
   def can_be_archived?
-    false
+    true
   end
 end

@@ -10,8 +10,9 @@ class Label
     # @items = []
   end
 
-  def add_item(item)
-    @item = item
+  def add_item(_item)
+    # @item = item
     # @items << self
+    true
   end
 end

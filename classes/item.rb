@@ -3,14 +3,14 @@ class Item
 
   def can_be_archived?()
     # @published_date
-    false
+    true
   end
 
   def archived
-    false
+    true
   end
 
   def move_to_archive
-    false
+    true
   end
 end
