@@ -1,7 +1,6 @@
 require 'date'
 
 class Item
-
   attr_accessor :id, :genre, :author, :source, :label, :publish_date, :archived
 
   def initialize(publish_date)
@@ -32,8 +31,9 @@ class Item
     @label = label
     label.items << self unless label.items.include?(self)
   end
+
   def add_source(source)
     @source = source
     source.items << self unless source.items.include?(self)
   end
-end    
+end
