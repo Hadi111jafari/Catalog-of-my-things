@@ -1,6 +1,7 @@
+require 'jsonable'
 require 'date'
 
-class Item
+class Item < JSONable
   attr_accessor :id, :genre, :author, :source, :label, :publish_date, :archived
 
   def initialize(publish_date)
