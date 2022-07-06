@@ -14,7 +14,6 @@ class App
 
   def list_books
     puts 'List of books'
-
   end
 
   def list_music_albums
@@ -83,7 +82,7 @@ class App
     puts("Created music_album id: #{music_album.id} published: #{music_album.publish_date}")
   end
 
-  def add_game
+  def add_game # rubocop:disable Metrics/MethodLength
     puts "Adding New  Games\n"
     print('Enter Author first name: ')
     first_name = gets.chomp.to_s
@@ -93,7 +92,7 @@ class App
     json_author = author.to_json
     json_author = json_author.to_s.gsub('@', '')
     @author_file.write_object(json_author)
-    puts "Author created"
+    puts 'Author created'
     puts('Enter game published date (YYYY-MM-DD): ')
     published_date = gets.chomp.to_s
     puts('Is this game multiplayer? [Y/N]: ')
@@ -101,7 +100,7 @@ class App
     multiplayer = response.downcase == 'y'
     puts('Date on Game last played at (YYYY-MM-DD): ')
     last_played_at = gets.chomp.to_s
-    game = Game.new(published_date, multiplayer,last_played_at)
+    game = Game.new(published_date, multiplayer, last_played_at)
     json_game = game.to_json
     json_game = json_game.to_s.gsub('@', '')
     @game_file.write_object(json_game)
