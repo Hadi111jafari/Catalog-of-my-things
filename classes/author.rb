@@ -12,5 +12,6 @@ class Author
   def add_item(_item)
     @items << _item
     _item.author = self
+    true
   end
 end
