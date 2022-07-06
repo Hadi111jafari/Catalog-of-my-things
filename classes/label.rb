@@ -1,4 +1,4 @@
-require_relative './../item'
+require_relative './item'
 class Label
   attr_accessor :title, :color, :item
 
@@ -9,7 +9,7 @@ class Label
     @items = []
   end
 
-  def add_item(item: item)
+  def add_item(item)
     @item = item
     @items << self
   end

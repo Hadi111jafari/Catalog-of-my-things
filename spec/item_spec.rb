@@ -1,4 +1,4 @@
-require_relative './../item'
+require_relative './../classes/item'
 describe 'Item TDD' do
   context 'can_be_archived' do
     it 'result should be true' do

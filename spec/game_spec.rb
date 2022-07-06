@@ -1,4 +1,4 @@
-require_relative './../game'
+require_relative './../classes/game'
 
 describe 'game TDD' do
   context 'can be archived' do

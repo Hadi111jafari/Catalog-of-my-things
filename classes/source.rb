@@ -1,7 +1,6 @@
-require_relative './../item'
-classs Source
+require_relative './item'
+class Source
+    def add_item(item)
 
-def add_item(item)
-
-end    
+    end    
 end

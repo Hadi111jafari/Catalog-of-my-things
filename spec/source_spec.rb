@@ -1,5 +1,5 @@
-require_relative './../source'
-require_relative './../item'
+require_relative './../classes/source'
+require_relative './../classes/item'
 describe 'source TDD' do
   context 'Add Item' do
     it 'item created' do
@@ -7,4 +7,5 @@ describe 'source TDD' do
       item=Item.new
       expect(source.add_item(item)).to eq(true)
     end
+  end
 end

@@ -25,7 +25,7 @@ def main # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
     #   write_file.close_file
       break
     end
-    break unless input.positive? && input < 8
+    break unless input.positive? && input < 12
   end
 end
 
