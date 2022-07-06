@@ -3,7 +3,7 @@ require_relative './../classes/item'
 describe 'author TDD' do
   context 'Add Item' do
     it 'item created' do
-      author = Author.new("Amrendra", "Kumar")
+      author = Author.new('Amrendra', 'Kumar')
       item = Item.new('2010-09-09')
       expect(author.add_item(item)).to eq(true)
     end
