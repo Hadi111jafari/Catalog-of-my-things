@@ -4,8 +4,8 @@ require 'date'
 class Item < JSONable
   attr_accessor :id, :genre, :author, :source, :label, :publish_date, :archived
 
-  def initialize(publish_date)
-     @id = Random.rand(1..1000)
+  def initialize(publish_date) # rubocop:disable Lint/MissingSuper
+    @id = Random.rand(1..1000)
     @publish_date = Date.parse(publish_date)
     @archived = false
   end
