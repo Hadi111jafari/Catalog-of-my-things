@@ -34,7 +34,7 @@ def menu
   puts '1. List all books.'
   puts '2. List all music albums.'
   puts '3. List of games.'
-  puts '4. List all genres (e.g Comedy, Thriller).'
+  puts '4. List all genres.'
   puts '5. List all labels (e.g. Gift, New).'
   puts '6. List all authors (e.g. Stephen King).'
   puts '7. List all sources (e.g. From a friend, Online shop)'
@@ -50,6 +50,7 @@ def user_input
     puts 'Please enter a valid option between 1 to 11: '
     input = gets.chomp.to_i
   end
+  system('cls')
   input
 end
 
