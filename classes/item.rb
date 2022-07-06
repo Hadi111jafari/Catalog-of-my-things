@@ -1,9 +1,10 @@
+require_relative './jsonable'
 require 'date'
 
-class Item
+class Item < JSONable
   attr_accessor :id, :genre, :author, :source, :label, :publish_date, :archived
 
-  def initialize(publish_date)
+  def initialize(publish_date) # rubocop:disable Lint/MissingSuper
     @id = Random.rand(1..1000)
     @publish_date = Date.parse(publish_date)
     @archived = false
