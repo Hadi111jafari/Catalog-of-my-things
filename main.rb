@@ -23,6 +23,7 @@ def main # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
     when 10 then app.add_game
     else
       #   write_file.close_file
+      puts 'Bye! Thank You For Using This App.'
       break
     end
     break unless input.positive? && input < 12

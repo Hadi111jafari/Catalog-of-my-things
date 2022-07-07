@@ -1,5 +1,7 @@
 require './base_file'
 require './classes/music_album'
+require './classes/book'
+require './classes/label'
 require './classes/game'
 require './classes/author'
 require 'json'
@@ -9,12 +11,19 @@ class App
     @book_file = BaseFile.new('./json/book.json')
     @music_album_file = BaseFile.new('./json/music_album.json')
     @genre_file = BaseFile.new('./json/genre.json')
+    @label_file = BaseFile.new('./json/lable.json')
     @game_file = BaseFile.new('./json/game.json')
     @author_file = BaseFile.new('./json/author.json')
   end
 
   def list_books
-    puts 'List of books'
+    data = @book_file.read_all_records
+    if data.empty?
+      puts("No book found. \n")
+    else
+      puts("List of all books: \n")
+      puts(data)
+    end
   end
 
   def list_music_albums
@@ -48,7 +57,13 @@ class App
   end
 
   def list_labels
-    puts 'List of labels'
+    data = @label_file.read_all_records
+    if data.empty?
+      puts("No label found. \n")
+    else
+      puts("List of all labels: \n")
+      puts(data)
+    end
   end
 
   def list_authors
@@ -66,7 +81,26 @@ class App
   end
 
   def add_book
-    puts 'Add book'
+    puts('Enter date of publication (YYYY-MM-DD):')
+    publish_date = gets.chomp.to_s
+    puts('Enter publisher:')
+    publisher = gets.chomp.to_s
+    puts('Enter cover_state:')
+    cover_state = gets.chomp.to_s
+    puts('Enter Title:')
+    title = gets.chomp.to_s
+    puts('Enter color:')
+    color = gets.chomp.to_s
+    book = Book.new(publish_date, publisher, cover_state)
+    label = Label.new(title, color)
+    json_book = book.to_json
+    json_book = json_book.to_s.gsub('@', ' ')
+    json_label = label.to_json
+    json_label = json_label.to_s.gsub('@', ' ')
+    # book_data = [json_book, json_label]
+    @book_file.write_object(json_book)
+    @label_file.write_object(json_label)
+    puts('Book successfully added')
   end
 
   def add_music_album
