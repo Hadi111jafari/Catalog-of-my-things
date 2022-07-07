@@ -16,30 +16,35 @@
 
 Clone Repository using
  ```
- `git clone git@github.com:Hadi111jafari/Catalog-of-my-things.git`
+ git clone git@github.com:Hadi111jafari/Catalog-of-my-things.git
  ```
 Or using HTTPS
  ```
- `git clone https://github.com/Hadi111jafari/Catalog-of-my-things.git`
+ git clone https://github.com/Hadi111jafari/Catalog-of-my-things.git
  ```
 
 Move into project directory
  ```
- `cd Catalog-of-my-things`
+ cd Catalog-of-my-things
  ```
 ## Available Scripts
  ```
- `ruby main.rb`
+ ruby main.rb
  ```
 ## Available Scripts to Run Test cases
 
 >Run following command
 
-`gem install rspec`
-
-`rspec --format documentation` or/and
-
-`rspec spec`
+ ```
+ gem install rspec
+ ```
+ or/and
+ ```
+ rspec --format documentation
+ ```
+ ```
+ rspec spec
+ ```
 
 ## Author
 
