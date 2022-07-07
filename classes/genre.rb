@@ -1,9 +1,11 @@
+require_relative './jsonable'
 require_relative './item'
-class Genre
+
+class Genre < JSONable
   attr_accessor :name
   attr_reader :id, :items
 
-  def initialize(name)
+  def initialize(name) # rubocop:disable Lint/MissingSuper
     @id = Random.rand(1..1000)
     @name = name
     @items = []
@@ -12,6 +14,5 @@ class Genre
   def add_item(item)
     item.genre = self
     @items.push(item)
-    true
   end
 end
