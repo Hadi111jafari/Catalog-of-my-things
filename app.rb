@@ -77,10 +77,6 @@ class App
     end
   end
 
-  def list_sources
-    puts 'List of Sources'
-  end
-
   def add_book
     puts('Enter date of publication (YYYY-MM-DD):')
     publish_date = gets.chomp.to_s
