@@ -8,6 +8,10 @@
 
 - Ruby
 
+## Video Link
+
+[Video Link for Project](https://drive.google.com/file/d/1BTrB2a6VURauMWX87LerCRGh_hJlQqGQ/view?usp=sharing)
+
 ## Development set up
 
 Clone Repository using
