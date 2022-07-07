@@ -76,13 +76,13 @@ ALTER TABLE item ADD CONSTRAINT add_author FOREIGN KEY(author_id) REFERENCES aut
 
 ALTER TABLE item ADD  CONSTRAINT add_label FOREIGN KEY(source_id) REFERENCES source (id);
 
+ALTER TABLE item ADD  CONSTRAINT add_genre FOREIGN KEY(genre_id) REFERENCES genre (id);
+
+ALTER TABLE item ADD  CONSTRAINT add_label FOREIGN KEY(label_id) REFERENCES label (id);
+
 ALTER TABLE item ADD  CONSTRAINT FK_Item_Book FOREIGN KEY(id) REFERENCES book (id);
 
 ALTER TABLE item ADD  CONSTRAINT FK_Item_Game FOREIGN KEY(id) REFERENCES game (id);
-
-ALTER TABLE item ADD  CONSTRAINT FK_Item_Genre FOREIGN KEY(genre_id) REFERENCES genre (id);
-
-ALTER TABLE item ADD  CONSTRAINT FK_Item_Label FOREIGN KEY(label_id) REFERENCES label (id);
 
 ALTER TABLE item ADD  CONSTRAINT FK_Item_Movie FOREIGN KEY(id) REFERENCES movie (id);
 

@@ -4,6 +4,7 @@ require './classes/book'
 require './classes/label'
 require './classes/game'
 require './classes/author'
+require './classes/genre'
 require 'json'
 
 class App
@@ -11,7 +12,7 @@ class App
     @book_file = BaseFile.new('./json/book.json')
     @music_album_file = BaseFile.new('./json/music_album.json')
     @genre_file = BaseFile.new('./json/genre.json')
-    @label_file = BaseFile.new('./json/lable.json')
+    @label_file = BaseFile.new('./json/label.json')
     @game_file = BaseFile.new('./json/game.json')
     @author_file = BaseFile.new('./json/author.json')
   end
@@ -76,10 +77,6 @@ class App
     end
   end
 
-  def list_sources
-    puts 'List of Sources'
-  end
-
   def add_book
     puts('Enter date of publication (YYYY-MM-DD):')
     publish_date = gets.chomp.to_s
@@ -97,13 +94,18 @@ class App
     json_book = json_book.to_s.gsub('@', ' ')
     json_label = label.to_json
     json_label = json_label.to_s.gsub('@', ' ')
-    # book_data = [json_book, json_label]
     @book_file.write_object(json_book)
     @label_file.write_object(json_label)
     puts('Book successfully added')
   end
 
   def add_music_album
+    puts('Enter genre: ')
+    genre_name = gets.chomp.to_s
+    genre = Genre.new(genre_name)
+    json_genre = genre.to_json
+    json_genre = json_genre.to_s.gsub('@', '')
+    @genre_file.write_object(json_genre)
     puts('Enter published date (YYYY-MM-DD): ')
     published_date = gets.chomp.to_s
     puts('Is on spotify? [Y/N]: ')
