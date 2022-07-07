@@ -15,21 +15,22 @@
 ## Development set up
 
 Clone Repository using
-
-`git clone git@github.com:amrendrakind/catalog-of-my-things.git`
-
+ ```
+ `git clone git@github.com:Hadi111jafari/Catalog-of-my-things.git`
+ ```
 Or using HTTPS
-
-`git clone https://github.com/amrendrakind/catalog-of-my-things.git`
+ ```
+ `git clone https://github.com/Hadi111jafari/Catalog-of-my-things.git`
+ ```
 
 Move into project directory
-
-`cd catalog-of-my-things`
-
+ ```
+ `cd Catalog-of-my-things`
+ ```
 ## Available Scripts
-
-`ruby main.rb`
-
+ ```
+ `ruby main.rb`
+ ```
 ## Available Scripts to Run Test cases
 
 >Run following command
