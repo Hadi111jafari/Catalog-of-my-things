@@ -52,7 +52,6 @@ class App
   end
 
   def list_authors
-    puts 'list of Authors'
     data = @author_file.read_all_records
     if data.empty?
       puts("No Authors found. \n")
