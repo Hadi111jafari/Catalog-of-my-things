@@ -14,7 +14,6 @@ class App
     @label_file = BaseFile.new('./json/lable.json')
     @game_file = BaseFile.new('./json/game.json')
     @author_file = BaseFile.new('./json/author.json')
-
   end
 
   def list_books
