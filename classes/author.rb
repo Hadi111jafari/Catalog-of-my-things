@@ -1,6 +1,7 @@
 require_relative './item'
+require_relative './jsonable'
 
-class Author
+class Author < JSONable
   attr_accessor :first_name, :last_name
   attr_reader :items, :id
 

@@ -1,6 +1,7 @@
 require './base_file'
 require './classes/music_album'
 require './classes/game'
+require './classes/author'
 require 'json'
 
 class App
@@ -103,6 +104,7 @@ class App
     game = Game.new(published_date, multiplayer, last_played_at)
     json_game = game.to_json
     json_game = json_game.to_s.gsub('@', '')
+    puts json_game
     @game_file.write_object(json_game)
     puts("Created game id: #{game.id} published: #{game.publish_date}")
   end
