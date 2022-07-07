@@ -11,7 +11,7 @@ class Game < Item
   end
 
   def can_be_archived?
-    return true if super and (Date.today.year - @last_played_at.year > 2)
+    return true if super && (Date.today.year - @last_played_at.year > 2)
 
     false
   end

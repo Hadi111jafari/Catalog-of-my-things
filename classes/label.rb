@@ -12,7 +12,7 @@ class Label < JSONable
   end
 
   def add_item(item)
-    item.add_label(self)
-    @items << item unless @items.include?(item)
+    item.label = self
+    @items << item
   end
 end
