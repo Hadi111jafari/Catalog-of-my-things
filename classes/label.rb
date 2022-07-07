@@ -1,7 +1,8 @@
 require_relative './jsonable'
 
 class Label < JSONable
-  attr_accessor :title, :color, :items
+  attr_accessor :title, :color
+  attr_reader :items, :id
 
   def initialize(title, color) # rubocop:disable Lint/MissingSuper
     @id = Random.rand(1..1000)
@@ -11,7 +12,7 @@ class Label < JSONable
   end
 
   def add_item(item)
-    @items << item unless @items.include?(item)
     item.add_label(self)
+    @items << item unless @items.include?(item)
   end
 end

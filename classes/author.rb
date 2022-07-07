@@ -15,6 +15,5 @@ class Author < JSONable
   def add_item(item)
     item.author = self
     @items << item
-    true
   end
 end

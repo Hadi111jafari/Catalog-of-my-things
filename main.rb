@@ -17,16 +17,15 @@ def main # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
     when 4 then app.list_genres
     when 5 then app.list_labels
     when 6 then app.list_authors
-    when 7 then app.list_sources
-    when 8 then app.add_book
-    when 9 then app.add_music_album
-    when 10 then app.add_game
+    when 7 then app.add_book
+    when 8 then app.add_music_album
+    when 9 then app.add_game
     else
       #   write_file.close_file
       puts 'Bye! Thank You For Using This App.'
       break
     end
-    break unless input.positive? && input < 12
+    break unless input.positive? && input < 11
   end
 end
 
@@ -38,17 +37,16 @@ def menu
   puts '4. List all genres.'
   puts '5. List all labels (e.g. Gift, New).'
   puts '6. List all authors (e.g. Stephen King).'
-  puts '7. List all sources (e.g. From a friend, Online shop)'
-  puts '8. Add a book.'
-  puts '9. Add a music album.'
-  puts '10.Add a game.'
-  puts '11. Exit'
+  puts '7. Add a book.'
+  puts '8. Add a music album.'
+  puts '9. Add a game.'
+  puts '10. Exit'
 end
 
 def user_input
   input = gets.chomp.to_i
-  while input > 11 || input < 1
-    puts 'Please enter a valid option between 1 to 11: '
+  while input > 10 || input < 1
+    puts 'Please enter a valid option between 1 to 10: '
     input = gets.chomp.to_i
   end
   system('cls')
